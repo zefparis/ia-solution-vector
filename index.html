@@ -36,7 +36,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 5%;display:flex
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;background:rgba(0,194,255,0.08);border:1px solid var(--border);border-radius:4px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--cyan);text-transform:uppercase;margin-bottom:28px}
 .hero-eyebrow span{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(0.7)}}
-h1{font-family:var(--font-head);font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:24px}
+h1{font-family:var(--font-head);font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:24px;overflow-wrap:anywhere}
 h1 em{color:var(--cyan);font-style:normal}
 .hero-sub{font-size:18px;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:40px;max-width:520px}
 .hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
@@ -166,22 +166,40 @@ footer{padding:40px 5%;border-top:1px solid var(--border);display:flex;justify-c
   nav{justify-content:center;flex-wrap:wrap}
   .nav-logo{width:100%;text-align:center}
   .nav-cta{width:100%;text-align:center}
-  .hero{min-height:auto;padding-top:140px}
+  .hero{min-height:auto;padding:128px 6% 64px}
+  .hero-grid{gap:32px}
+  .hero-eyebrow{margin-bottom:20px;padding:6px 12px}
+  h1{font-size:clamp(28px,9vw,36px);line-height:1.08;letter-spacing:-.6px;margin-bottom:18px}
+  h2{font-size:clamp(24px,8vw,30px);line-height:1.12;margin-bottom:16px}
+  .section-tag{font-size:10px;letter-spacing:2px;margin-bottom:12px}
   .hero-buttons,.cta-buttons{flex-direction:column}
   .hero-buttons a,.cta-buttons a{width:100%;text-align:center}
   .hero-eyebrow{font-size:11px;letter-spacing:1px}
-  .hero-sub,.lead,.cta p{font-size:16px}
+  .hero-sub,.lead,.cta p{font-size:16px;line-height:1.65}
   .stats-grid,.bio-grid,.security-grid,.problem-grid{grid-template-columns:1fr}
   .stat-item{border-right:none;border-bottom:1px solid var(--border)}
   .stat-item:last-child{border-bottom:none}
   .compare-head,.compare-row{grid-template-columns:1fr}
   .compare-head div:first-child{display:none}
-  .compare-row div:first-child{margin-bottom:4px}
+  .compare-row div:first-child{margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+  .compare-table{margin-top:40px;border-radius:12px}
+  .compare-row{padding:16px 18px;gap:6px}
+  .compare-row div{font-size:13px}
   .timeline{grid-template-columns:1fr}
   .tl-step:last-child{grid-column:auto}
   .entropy-row{flex-direction:column}
   .patent-chip{width:100%}
   footer{flex-direction:column;gap:12px;text-align:center}
+}
+@media(max-width:420px){
+  .hero{padding:120px 6% 56px}
+  h1{font-size:30px;line-height:1.06}
+  h2{font-size:24px}
+  .section-tag{letter-spacing:1.6px}
+  .compare-head{display:none}
+  .compare-table{margin-top:32px}
+  .compare-row{padding:14px 14px}
+  .compare-row div:last-child{margin-top:2px}
 }
 </style>
 </head>
